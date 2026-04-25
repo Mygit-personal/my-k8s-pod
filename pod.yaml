@@ -11,7 +11,7 @@ spec:
       ports:
         - containerPort: 80
           protocol: TCP
-      command: ["stress", "--vm", "1", "--vm-bytes", "155M"]
+      command: ["stress", "--vm", "1", "--vm-bytes", "125M"]
       resources:
         requests:
           cpu: "150m"
