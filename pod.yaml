@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: my-cont-stress
-      image: progrium/stress
+      image: polinux/stress
       ports:
         - containerPort: 80
           protocol: TCP
