@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: pod-stress
+  labels:
+    env: dev
+spec:
+  containers:
+    - name: my-cont-stress
+      image: progrium/stress
+      ports:
+        - containerPort: 80
+          protocol: TCP
+      command: ["stress", "--vm", "2", "--vm-bytes", "125M"]
+      resources:
+        requests:
+          cpu: "150m"
+          memory: 100Mi
+        limits:
+          cpu: "200m"
+          memory: 150Mi
