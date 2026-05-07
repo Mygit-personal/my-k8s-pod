@@ -10,8 +10,6 @@ spec:
       image: nginx
       ports:
         - containerPort: 80
-        
-      command: ["stress", "--vm", "1", "--vm-bytes", "155M"]  
       resources:
         requests:
           cpu: 50m
